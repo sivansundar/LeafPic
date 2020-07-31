@@ -220,4 +220,6 @@
         <activity android:name=".activities.AffixActivity" />
     </application>
 
+
+
 </manifest>

@@ -9,8 +9,13 @@ import com.mikepenz.iconics.Iconics;
 import com.orhanobut.hawk.Hawk;
 import com.squareup.leakcanary.LeakCanary;
 
+import org.horaapps.leafpic.activities.SettingsActivity;
+import org.horaapps.leafpic.settings.ColorsSetting;
+import org.horaapps.leafpic.settings.ThemedSetting;
 import org.horaapps.leafpic.util.ApplicationUtils;
 import org.horaapps.leafpic.util.preferences.Prefs;
+
+import static org.horaapps.liz.Theme.AMOLED;
 
 /**
  * Created by dnld on 28/04/16.
@@ -35,6 +40,7 @@ public class App extends MultiDexApplication {
 
         registerFontIcons();
         initialiseStorage();
+
     }
 
     public static App getInstance() {

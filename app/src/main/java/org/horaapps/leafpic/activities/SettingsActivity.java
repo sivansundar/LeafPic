@@ -132,7 +132,8 @@ public class SettingsActivity extends ThemedActivity {
 
     @OnClick(R.id.ll_basic_theme)
     public void onChangeThemeClicked(View view) {
-        new ColorsSetting(SettingsActivity.this).chooseBaseTheme();
+        new ColorsSetting(SettingsActivity.this).setAmoledMode();
+        //Remove this theme feature and set the base theme AMOLED throughout
     }
 
     @OnClick(R.id.ll_card_view_style)

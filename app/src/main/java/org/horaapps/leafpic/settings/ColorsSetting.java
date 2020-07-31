@@ -31,6 +31,10 @@ public class ColorsSetting extends ThemedSetting {
         super(activity);
     }
 
+    public void setAmoledMode() {
+
+    }
+
     public void chooseBaseTheme() {
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity(), getActivity().getDialogStyle());
 

@@ -293,7 +293,7 @@ public class AlbumsAdapter extends ThemedAdapter<AlbumsAdapter.ViewHolder> {
         if (accentColor == getThemeHelper().getPrimaryColor())
             accentColor = ColorPalette.getDarkerColor(accentColor);
 
-        int textColor = getThemeHelper().getColor(getThemeHelper().getBaseTheme().equals(Theme.LIGHT) ? R.color.md_album_color_2 : R.color.md_album_color);
+        int textColor = getThemeHelper().getColor(getThemeHelper().getBaseTheme().equals(Theme.LIGHT) ? R.color.md_black_1000 : R.color.md_white_1000);
 
         if (a.isSelected())
             textColor = getThemeHelper().getColor(R.color.md_album_color);

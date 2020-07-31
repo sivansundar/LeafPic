@@ -32,7 +32,6 @@ import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.iconics.typeface.IIcon;
 import com.orhanobut.hawk.Hawk;
 
-import org.horaapps.leafpic.BuildConfig;
 import org.horaapps.leafpic.R;
 import org.horaapps.leafpic.about.AboutActivity;
 import org.horaapps.leafpic.activities.base.SharedMediaActivity;
@@ -43,6 +42,7 @@ import org.horaapps.leafpic.fragments.EditModeListener;
 import org.horaapps.leafpic.fragments.NothingToShowListener;
 import org.horaapps.leafpic.fragments.RvMediaFragment;
 import org.horaapps.leafpic.interfaces.MediaClickListener;
+import org.horaapps.leafpic.settings.ThemedSetting;
 import org.horaapps.leafpic.timeline.TimelineFragment;
 import org.horaapps.leafpic.util.AlertDialogsHelper;
 import org.horaapps.leafpic.util.DeviceUtils;
@@ -51,6 +51,7 @@ import org.horaapps.leafpic.util.Security;
 import org.horaapps.leafpic.util.StringUtils;
 import org.horaapps.leafpic.util.preferences.Prefs;
 import org.horaapps.leafpic.views.navigation_drawer.NavigationDrawer;
+import org.horaapps.liz.BuildConfig;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -69,6 +70,8 @@ import static org.horaapps.leafpic.views.navigation_drawer.NavigationDrawer.NAVI
 import static org.horaapps.leafpic.views.navigation_drawer.NavigationDrawer.NAVIGATION_ITEM_TIMELINE;
 import static org.horaapps.leafpic.views.navigation_drawer.NavigationDrawer.NAVIGATION_ITEM_WALLPAPERS;
 import static org.horaapps.leafpic.views.navigation_drawer.NavigationDrawer.NavigationItem;
+import static org.horaapps.liz.Theme.AMOLED;
+import static org.horaapps.liz.Theme.LIGHT;
 
 /**
  * The Main Activity used to display Albums / Media.
@@ -87,6 +90,8 @@ public class MainActivity extends SharedMediaActivity implements
         int MODE_TIMELINE = 1003;
     }
 
+    public int toolbarBackground;
+
     @BindView(R.id.fab_camera) FloatingActionButton fab;
     @BindView(R.id.drawer_layout) DrawerLayout navigationDrawer;
     @BindView(R.id.home_navigation_drawer) NavigationDrawer navigationDrawerView;
@@ -99,6 +104,7 @@ public class MainActivity extends SharedMediaActivity implements
 
     private boolean pickMode = false;
     private Unbinder unbinder;
+    ThemedSetting themedSetting;
 
     @FragmentMode private int fragmentMode;
 
@@ -106,7 +112,12 @@ public class MainActivity extends SharedMediaActivity implements
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        toolbarBackground = getResources().getColor(R.color.md_black_1000);
         unbinder = ButterKnife.bind(this);
+
+        themedSetting = new ThemedSetting(this);
+
+        themedSetting.getActivity().setBaseTheme(AMOLED);
 
         initUi();
         pickMode = getIntent().getBooleanExtra(ARGS_PICK_MODE, false);
@@ -358,7 +369,7 @@ public class MainActivity extends SharedMediaActivity implements
         super.updateUiElements();
         //TODO: MUST BE FIXED
         toolbar.setPopupTheme(getPopupToolbarStyle());
-        toolbar.setBackgroundColor(getPrimaryColor());
+        toolbar.setBackgroundColor(toolbarBackground);
 
         /**** SWIPE TO REFRESH ****/
 
@@ -367,7 +378,7 @@ public class MainActivity extends SharedMediaActivity implements
 
         fab.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         fab.setVisibility(Hawk.get(getString(R.string.preference_show_fab), false) ? View.VISIBLE : View.GONE);
-        mainLayout.setBackgroundColor(getBackgroundColor());
+        mainLayout.setBackgroundColor(toolbarBackground);
 
 //        setScrollViewColor(navigationDrawerView);
         setAllScrollbarsColor();

@@ -4,6 +4,7 @@
     tools:context="org.horaapps.leafpic.activities.MainActivity">
 
     <item
+
         android:id="@+id/filter_menu"
         android:title="@string/filter_menu_title"
         app:showAsAction="ifRoom">
