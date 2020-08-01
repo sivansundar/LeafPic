@@ -45,13 +45,13 @@ import org.horaapps.leafpic.interfaces.MediaClickListener;
 import org.horaapps.leafpic.settings.ThemedSetting;
 import org.horaapps.leafpic.timeline.TimelineFragment;
 import org.horaapps.leafpic.util.AlertDialogsHelper;
-import org.horaapps.leafpic.util.DeviceUtils;
 import org.horaapps.leafpic.util.LegacyCompatFileProvider;
 import org.horaapps.leafpic.util.Security;
 import org.horaapps.leafpic.util.StringUtils;
 import org.horaapps.leafpic.util.preferences.Prefs;
 import org.horaapps.leafpic.views.navigation_drawer.NavigationDrawer;
 import org.horaapps.liz.BuildConfig;
+import org.horaapps.liz.ColorPalette;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -71,7 +71,6 @@ import static org.horaapps.leafpic.views.navigation_drawer.NavigationDrawer.NAVI
 import static org.horaapps.leafpic.views.navigation_drawer.NavigationDrawer.NAVIGATION_ITEM_WALLPAPERS;
 import static org.horaapps.leafpic.views.navigation_drawer.NavigationDrawer.NavigationItem;
 import static org.horaapps.liz.Theme.AMOLED;
-import static org.horaapps.liz.Theme.LIGHT;
 
 /**
  * The Main Activity used to display Albums / Media.
@@ -389,6 +388,15 @@ public class MainActivity extends SharedMediaActivity implements
 
         // TODO Calvin: This performs a NO-OP. Find out what this is used for
         setRecentApp(getString(R.string.app_name));
+    }
+
+
+    @Override
+    protected void setStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(ColorPalette.getTransparentColor(
+                    ContextCompat.getColor(getApplicationContext(), org.horaapps.leafpic.R.color.md_black_1000), 70));
+        }
     }
 
     private void setAllScrollbarsColor() {

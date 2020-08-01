@@ -120,7 +120,7 @@ public class SettingsActivity extends ThemedActivity {
     @Override
     protected void setStatusBarColor() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            int color = getThemeHelper().getPrimaryColor();
+            int color = ContextCompat.getColor(this, R.color.md_black_1000);
             if (isTranslucentStatusBar())
                 getWindow().setStatusBarColor(ColorPalette.getObscuredColor(color));
             else getWindow().setStatusBarColor(color);

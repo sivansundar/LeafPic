@@ -102,7 +102,10 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
 
     @BindView(R.id.photos_pager) HackyViewPager mViewPager;
     @BindView(R.id.PhotoPager_Layout) RelativeLayout activityBackground;
-    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.toolbar_holder)
+    RelativeLayout toolbar_holder;
 
     private boolean fullScreenMode, customUri = false;
     private int position;
@@ -276,6 +279,7 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
 
             @Override
             public void onPageSelected(int position) {
+                Log.d(TAG, "onPageSelected: SELECTED");
                 SingleMediaActivity.this.position = position;
                 updatePageTitle(position);
 
@@ -327,11 +331,10 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
         /**** Theme ****/
         toolbar.setBackgroundColor(
                 themeOnSingleImgAct()
-                        ? ColorPalette.getTransparentColor(getResources().getColor(R.color.md_black_1000), 255 - Hawk.get(getString(R.string.preference_transparency), 0))
+                        ? ColorPalette.getTransparentColor(getResources().getColor(R.color.transparent), 255 - Hawk.get(getString(R.string.preference_transparency), 0))
                         : ColorPalette.getTransparentColor(getDefaultThemeToolbarColor3th(), 175));
 
         toolbar.setPopupTheme(getPopupToolbarStyle());
-
 
         activityBackground.setBackgroundColor(getBackgroundColor());
 
@@ -765,7 +768,7 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
     private void hideSystemUI() {
         runOnUiThread(new Runnable() {
             public void run() {
-                toolbar.animate().translationY(-(toolbar.getHeight())).setInterpolator(new AccelerateInterpolator())
+                toolbar_holder.animate().translationY(-(toolbar_holder.getHeight())).setInterpolator(new AccelerateInterpolator())
                         .setDuration(200).start();
 
                 getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
@@ -781,7 +784,8 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
                                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                                | View.SYSTEM_UI_FLAG_IMMERSIVE);
+                                | View.SYSTEM_UI_FLAG_IMMERSIVE
+                                | View.SYSTEM_UI_FLAG_FULLSCREEN);
 
                 fullScreenMode = true;
                 changeBackGroundColor();
@@ -790,7 +794,7 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
     }
 
     private void setupSystemUI() {
-        toolbar.animate().translationY(Measure.getStatusBarHeight(getResources())).setInterpolator(new DecelerateInterpolator())
+        toolbar_holder.animate().translationY(Measure.getStatusBarHeight(getResources())).setInterpolator(new DecelerateInterpolator())
                 .setDuration(0).start();
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -801,8 +805,9 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
     private void showSystemUI() {
         runOnUiThread(new Runnable() {
             public void run() {
-                toolbar.animate().translationY(Measure.getStatusBarHeight(getResources())).setInterpolator(new DecelerateInterpolator())
+                toolbar_holder.animate().translationY(Measure.getStatusBarHeight(getResources())).setInterpolator(new DecelerateInterpolator())
                         .setDuration(240).start();
+
 
                 getWindow().getDecorView().setSystemUiVisibility(
                         View.SYSTEM_UI_FLAG_LAYOUT_STABLE

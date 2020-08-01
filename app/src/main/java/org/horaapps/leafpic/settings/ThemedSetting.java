@@ -1,6 +1,5 @@
 package org.horaapps.leafpic.settings;
 
-import org.horaapps.liz.Theme;
 import org.horaapps.liz.ThemedActivity;
 
 /**
