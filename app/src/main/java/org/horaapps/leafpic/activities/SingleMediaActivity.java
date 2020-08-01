@@ -327,7 +327,7 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
         /**** Theme ****/
         toolbar.setBackgroundColor(
                 themeOnSingleImgAct()
-                        ? ColorPalette.getTransparentColor(getPrimaryColor(), 255 - Hawk.get(getString(R.string.preference_transparency), 0))
+                        ? ColorPalette.getTransparentColor(getResources().getColor(R.color.md_black_1000), 255 - Hawk.get(getString(R.string.preference_transparency), 0))
                         : ColorPalette.getTransparentColor(getDefaultThemeToolbarColor3th(), 175));
 
         toolbar.setPopupTheme(getPopupToolbarStyle());
@@ -727,7 +727,7 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (themeOnSingleImgAct())
                 if (isNavigationBarColored())
-                    getWindow().setNavigationBarColor(ColorPalette.getTransparentColor(getPrimaryColor(), getTransparency()));
+                    getWindow().setNavigationBarColor(ColorPalette.getTransparentColor(getResources().getColor(R.color.md_black_1000), getTransparency()));
                 else
                     getWindow().setNavigationBarColor(ColorPalette.getTransparentColor(ContextCompat.getColor(getApplicationContext(), R.color.md_black_1000), getTransparency()));
             else
@@ -740,9 +740,9 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (themeOnSingleImgAct())
                 if (isTranslucentStatusBar() && isTransparencyZero())
-                    getWindow().setStatusBarColor(ColorPalette.getObscuredColor(getPrimaryColor()));
+                    getWindow().setStatusBarColor(ColorPalette.getObscuredColor(getResources().getColor(R.color.md_black_1000)));
                 else
-                    getWindow().setStatusBarColor(ColorPalette.getTransparentColor(getPrimaryColor(), getTransparency()));
+                    getWindow().setStatusBarColor(ColorPalette.getTransparentColor(getResources().getColor(R.color.md_black_1000), getTransparency()));
             else
                 getWindow().setStatusBarColor(ColorPalette.getTransparentColor(
                         ContextCompat.getColor(getApplicationContext(), R.color.md_black_1000), 175));
@@ -765,7 +765,7 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
     private void hideSystemUI() {
         runOnUiThread(new Runnable() {
             public void run() {
-                toolbar.animate().translationY(-toolbar.getHeight()).setInterpolator(new AccelerateInterpolator())
+                toolbar.animate().translationY(-(toolbar.getHeight())).setInterpolator(new AccelerateInterpolator())
                         .setDuration(200).start();
 
                 getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {

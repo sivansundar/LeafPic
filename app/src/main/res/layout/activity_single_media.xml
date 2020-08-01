@@ -7,11 +7,21 @@
     android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar"
-        android:background="@color/md_dark_appbar"
-        android:windowActionBarOverlay="true" />
+    <RelativeLayout
+        android:id="@+id/toolbar_holder"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:background="@color/md_dark_appbar"
+            android:windowActionBarOverlay="true" />
+
+    </RelativeLayout>
 
     <org.horaapps.leafpic.views.HackyViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
