@@ -178,4 +178,5 @@
   <string name="map_provider">Kartleverandør</string>
   <string name="insert_something">Sett inn noe!</string>
   <string name="password_dont_match">Passord stemmer ikke overens</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

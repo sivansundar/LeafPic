@@ -12,11 +12,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar"
-            android:background="@color/md_dark_appbar"
-            android:windowActionBarOverlay="true" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/md_black_1000">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/md_dark_appbar"
+                android:windowActionBarOverlay="true" />
+
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_ea"
@@ -24,7 +35,7 @@
             android:layout_height="match_parent">
 
             <!--THERE IS NOTHING TO SHOW-->
-            <include layout="@layout/there_is_nothing_to_show"/>
+            <include layout="@layout/there_is_nothing_to_show" />
 
             <!--RECYCLE VIEW AND WHITE LIST CARD-->
             <LinearLayout

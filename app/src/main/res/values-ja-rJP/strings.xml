@@ -264,4 +264,5 @@ Crowdin コミュニティのすべての翻訳者    </string>
   <string name="sub_scaling_image_view">サブスケーリング画像表示</string>
   <string name="sub_scaling_image_view_sub">
 (テスト中) 改善されたズーム管理とクリアな画像にできますが、まだ本当に最適化されていません    </string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

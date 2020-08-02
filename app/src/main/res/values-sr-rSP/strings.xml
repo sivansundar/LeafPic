@@ -201,4 +201,5 @@
   <string name="include_video">Укључи видео</string>
   <string name="insert_something">Унесите нешто!</string>
   <string name="password_dont_match">Лозинке се не подударају</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

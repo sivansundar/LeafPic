@@ -191,4 +191,5 @@
   <string name="error_querying_decoders">Невозможно обнаружить декодеры</string>
   <string name="unable_to_fix_date">Не удалось исправить дату</string>
   <string name="compression_settings">Настройки сжатия</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

@@ -237,4 +237,5 @@ till dig som använder appen    </string>
   <string name="multi_column">Multikolumn</string>
   <string name="multi_column_sub">Välj hur många kolumner som ska användas för mappar och innehåll    </string>
   <string name="columns">kolumner</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

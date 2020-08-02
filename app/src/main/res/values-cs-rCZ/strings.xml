@@ -236,4 +236,5 @@ Vám za používání této aplikace    </string>
   <string name="multi_column">Sloupce</string>
   <string name="multi_column_sub">Vyberte, kolik sloupců chcete pro složky a média    </string>
   <string name="columns">sloupce</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

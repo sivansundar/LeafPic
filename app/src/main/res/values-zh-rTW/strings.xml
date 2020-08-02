@@ -228,4 +228,5 @@
   <string name="sub_scaling_image_view_sub">        (測試中)此功能提供更佳的縮放效果和更清晰的圖片
         但尚在完善中
     </string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

@@ -257,4 +257,5 @@ Mi piace anche lavorare con l\'informatica, la programmazione e il design.</stri
   <string name="sub_scaling_image_view">Ridimensionamento immagine</string>
   <string name="sub_scaling_image_view_sub">
 (TESTING) Ti permette  di avere una gestione migliore dello zoom e un\'immagine pulita ma questa funzione non ancora è ottimizzata    </string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

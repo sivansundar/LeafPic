@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:id="@+id/root"
-              android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:layout_height="match_parent">
 
     <!--TOOLBAR-->
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar"
-        android:background="@color/md_dark_appbar"
-        android:windowActionBarOverlay="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/md_black_1000">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:windowActionBarOverlay="true" />
+
+
+    </RelativeLayout>
 
     <android.support.v7.widget.CardView
         android:id="@+id/security_dialog_card"

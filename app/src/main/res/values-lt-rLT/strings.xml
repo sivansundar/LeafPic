@@ -137,4 +137,5 @@
   <string name="error_drm_unknown">Nežinonoma DRM klaida</string>
   <string name="storage_permission_denied">Leidimas prieiti atmintį buvo uždraustas!\n negalima gauti Jūsų paveikslėlių!</string>
   <string name="error_querying_decoders">Negalima užklausti įrenginio dekoderių</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

@@ -1,5 +1,6 @@
 package org.horaapps.leafpic.activities;
 
+import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.graphics.PorterDuff;
 import android.os.Build;
@@ -31,7 +32,7 @@ import org.horaapps.liz.ui.ThemedIcon;
  */
 public class SecurityActivity extends ThemedActivity {
 
-    private Toolbar toolbar;
+    public Toolbar toolbar;
 
     private LinearLayout llroot;
     private SwitchCompat swActiveSecurity;
@@ -47,6 +48,7 @@ public class SecurityActivity extends ThemedActivity {
         setContentView(R.layout.activity_security);
         llroot = findViewById(R.id.root);
         toolbar = findViewById(R.id.toolbar);
+
         swActiveSecurity = findViewById(R.id.active_security_switch);
         swApplySecurityDelete = findViewById(R.id.security_body_apply_delete_switch);
         swApplySecurityHidden = findViewById(R.id.security_body_apply_hidden_switch);
@@ -131,8 +133,8 @@ public class SecurityActivity extends ThemedActivity {
 
     private void initUi() {
         setSupportActionBar(toolbar);
-        toolbar.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
 
+        toolbar.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
         toolbar.setNavigationIcon(getToolbarIcon(GoogleMaterial.Icon.gmd_arrow_back));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -234,10 +236,10 @@ public class SecurityActivity extends ThemedActivity {
     public void updateUiElements() {
         super.updateUiElements();
         setRecentApp(getString(R.string.security));
-        toolbar.setBackgroundColor(getPrimaryColor());
 
         setSwitchColor(getAccentColor(), swActiveSecurity, swApplySecurityHidden, swApplySecurityDelete, swFingerPrint);
         toggleEnabledChild(swActiveSecurity.isChecked());
+        toolbar.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
 
         setStatusBarColor();
         setNavBarColor();
@@ -259,6 +261,13 @@ public class SecurityActivity extends ThemedActivity {
         ((TextView) findViewById(org.horaapps.leafpic.R.id.security_body_apply_hidden_title)).setTextColor(color);
         ((TextView) findViewById(org.horaapps.leafpic.R.id.security_body_apply_delete_title)).setTextColor(color);
         ((TextView) findViewById(org.horaapps.leafpic.R.id.active_security_fingerprint_item_title)).setTextColor(color);
+
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    protected void setStatusBarColor() {
+
+        getWindow().setStatusBarColor(getResources().getColor(R.color.md_black_1000));
 
     }
 }

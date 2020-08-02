@@ -54,19 +54,20 @@
   <!-- AFFIX -->
   <!-- RANDOM -->
   <!--SETTINGS PREFERENCES-->
-  <!-- SECURITY-->
-  <!-- SETTINGS -->
-  <string name="white">Wit</string>
-  <string name="dark">Donker</string>
-  <!--DONATE STRINGS-->
-  <string name="donate_googleplay">Google Play-Winkel</string>
-  <string name="donate_payppal">PayPal</string>
-  <string name="donate_bitcoin">Bitcoin</string>
-  <string name="thank_you">Dankie!</string>
-  <string name="address_copied">Adres gekopieer na knipbord</string>
-  <!--ABOUT STRINGS-->
-  <!--PHOTO DETAILS-->
-  <!--DRAWER ITEMS -->
-  <!--VIDEO PLayer-->
-  <!-- ERRORS -->
+    <!-- SECURITY-->
+    <!-- SETTINGS -->
+    <string name="white">Wit</string>
+    <string name="dark">Donker</string>
+    <!--DONATE STRINGS-->
+    <string name="donate_googleplay">Google Play-Winkel</string>
+    <string name="donate_payppal">PayPal</string>
+    <string name="donate_bitcoin">Bitcoin</string>
+    <string name="thank_you">Dankie!</string>
+    <string name="address_copied">Adres gekopieer na knipbord</string>
+    <string name="donate_liberapay">donate_liberapay</string>
+    <!--ABOUT STRINGS-->
+    <!--PHOTO DETAILS-->
+    <!--DRAWER ITEMS -->
+    <!--VIDEO PLayer-->
+    <!-- ERRORS -->
 </resources>

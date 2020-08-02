@@ -414,5 +414,7 @@
     <string name="timeline_grouping_menu_week">Week</string>
     <string name="timeline_grouping_menu_month">Month</string>
     <string name="timeline_grouping_menu_year">Year</string>
+    <string name="donate_liberapay">Liberapay</string>
+    <string name="donate_liberapay_text">Donate to cro using LiberaPay. As of today, cro receives £1.04 per week.</string>
 
 </resources>

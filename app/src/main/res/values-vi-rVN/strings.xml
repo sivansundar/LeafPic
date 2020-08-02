@@ -68,20 +68,21 @@
   <string name="excluded_albums_sub">Khôi phục các album bị loại trừ.</string>
   <string name="custom_3thAct_sub">Áp dụng chủ đề trên trình xem hình ảnh.</string>
   <string name="max_brightness">Độ sáng cao</string>
-  <string name="picture_orientation_sub">Xoay ảnh sử dụng cảm biến</string>
-  <string name="apply_theme">Áp dụng chủ đề</string>
-  <string name="apply_theme_sub">Áp dụng tùy chỉnh màu sắc trên trình xem ảnh.</string>
-  <string name="transparency">Trong suốt</string>
-  <string name="transparency_sub">Thiết lập mức độ trong suốt</string>
-  <string name="load_full_image_when_zoom_in">Tải toàn bộ hình ảnh khi phóng to</string>
-  <string name="media_viewer_swipe_direction_sub">Thay đổi hướng vuốt của trình xem ảnh (Mặc định là trái sang phải)</string>
-  <string name="theme">Chủ đề</string>
-  <string name="primary_color">Màu chính</string>
-  <string name="primary_color_sub">Màu sắc chính được sử dụng trong giao diện.</string>
-  <!--DONATE STRINGS-->
-  <!--ABOUT STRINGS-->
-  <!--PHOTO DETAILS-->
-  <!--DRAWER ITEMS -->
-  <!--VIDEO PLayer-->
-  <!-- ERRORS -->
+    <string name="picture_orientation_sub">Xoay ảnh sử dụng cảm biến</string>
+    <string name="apply_theme">Áp dụng chủ đề</string>
+    <string name="apply_theme_sub">Áp dụng tùy chỉnh màu sắc trên trình xem ảnh.</string>
+    <string name="transparency">Trong suốt</string>
+    <string name="transparency_sub">Thiết lập mức độ trong suốt</string>
+    <string name="load_full_image_when_zoom_in">Tải toàn bộ hình ảnh khi phóng to</string>
+    <string name="media_viewer_swipe_direction_sub">Thay đổi hướng vuốt của trình xem ảnh (Mặc định là trái sang phải)</string>
+    <string name="theme">Chủ đề</string>
+    <string name="primary_color">Màu chính</string>
+    <string name="primary_color_sub">Màu sắc chính được sử dụng trong giao diện.</string>
+    <string name="donate_liberapay">donate_liberapay</string>
+    <!--DONATE STRINGS-->
+    <!--ABOUT STRINGS-->
+    <!--PHOTO DETAILS-->
+    <!--DRAWER ITEMS -->
+    <!--VIDEO PLayer-->
+    <!-- ERRORS -->
 </resources>

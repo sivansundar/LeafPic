@@ -240,4 +240,5 @@ i dla Ciebie za używanie naszej aplikacji..:)    </string>
   <string name="multi_column">Wiele kolumn</string>
   <string name="multi_column_sub">Wybierz, ile chcesz kolumn do podglądu swoich folderów i mediów    </string>
   <string name="columns">kolumny</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

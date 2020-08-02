@@ -108,4 +108,5 @@
   <string name="error_drm_unsupported_scheme">Αυτή η συσκευή δεν υποστηρίζει το απαιτούμενο σύστημα DRM</string>
   <string name="error_drm_unknown">Παρουσιάστηκε ένα άγνωστο σφάλμα</string>
   <string name="storage_permission_denied">Δεν επιτράπηκε η άδεια πρόσβασης αποθήκευσης! \n δεν είμαι σε θέση να δείξω τις εικόνες σας!</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

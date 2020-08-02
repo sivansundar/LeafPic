@@ -261,4 +261,5 @@ mostrar les carpetes i el contingut multimèdia.    </string>
   <string name="sub_scaling_image_view">Vista d\'imatge amb sub-escala</string>
   <string name="sub_scaling_image_view_sub">
 (EN PROVES) Permet tenir una millor gestió de zoom i una imatge clara però, ara mateix no està realment optimitzat    </string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

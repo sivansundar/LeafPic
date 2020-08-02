@@ -22,27 +22,28 @@
   <string name="name">Nimi</string>
   <string name="date">Päiväys</string>
   <string name="date_taken">Kuvauspäivä</string>
-  <string name="size">Koko</string>
-  <string name="ascending">Nouseva</string>
-  <string name="select_all">Valitse kaikki</string>
-  <string name="clear_selected">Tyhjennä valinnat</string>
-  <string name="share">Jaa</string>
-  <string name="rotate">Kierrä</string>
-  <string name="rotate_right_90">Kierrä oikealle 90 astetta</string>
-  <string name="rotate_left_90">Kierrä vasemmalle 90 astetta</string>
-  <string name="rotate_180">Kierrä 180 astetta</string>
-  <string name="new_folder">Uusi kansio</string>
-  <!--DIALOG MESSAGES-->
-  <!-- ITEMS -->
-  <!-- AFFIX -->
-  <!-- RANDOM -->
-  <!--SETTINGS PREFERENCES-->
-  <!-- SECURITY-->
-  <!-- SETTINGS -->
-  <!--DONATE STRINGS-->
-  <!--ABOUT STRINGS-->
-  <!--PHOTO DETAILS-->
-  <!--DRAWER ITEMS -->
+    <string name="size">Koko</string>
+    <string name="ascending">Nouseva</string>
+    <string name="select_all">Valitse kaikki</string>
+    <string name="clear_selected">Tyhjennä valinnat</string>
+    <string name="share">Jaa</string>
+    <string name="rotate">Kierrä</string>
+    <string name="rotate_right_90">Kierrä oikealle 90 astetta</string>
+    <string name="rotate_left_90">Kierrä vasemmalle 90 astetta</string>
+    <string name="rotate_180">Kierrä 180 astetta</string>
+    <string name="new_folder">Uusi kansio</string>
+    <string name="donate_liberapay">donate_liberapay</string>
+    <!--DIALOG MESSAGES-->
+    <!-- ITEMS -->
+    <!-- AFFIX -->
+    <!-- RANDOM -->
+    <!--SETTINGS PREFERENCES-->
+    <!-- SECURITY-->
+    <!-- SETTINGS -->
+    <!--DONATE STRINGS-->
+    <!--ABOUT STRINGS-->
+    <!--PHOTO DETAILS-->
+    <!--DRAWER ITEMS -->
   <!--VIDEO PLayer-->
   <!-- ERRORS -->
 </resources>

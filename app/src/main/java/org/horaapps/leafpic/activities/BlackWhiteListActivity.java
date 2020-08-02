@@ -1,5 +1,7 @@
 package org.horaapps.leafpic.activities;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
@@ -150,6 +152,7 @@ public class BlackWhiteListActivity extends SharedMediaActivity {
     private void initUi() {
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(getToolbarIcon(GoogleMaterial.Icon.gmd_arrow_back));
+        toolbar.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         mRecyclerView.setHasFixedSize(true);
@@ -165,7 +168,7 @@ public class BlackWhiteListActivity extends SharedMediaActivity {
     @Override
     public void updateUiElements(){
         super.updateUiElements();
-        toolbar.setBackgroundColor(getPrimaryColor());
+        toolbar.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
         mRecyclerView.setBackgroundColor(getBackgroundColor());
         setStatusBarColor();
         setNavBarColor();
@@ -178,6 +181,13 @@ public class BlackWhiteListActivity extends SharedMediaActivity {
         ((TextView) findViewById(R.id.nothing_to_show_text_emoji_easter_egg)).setTextColor(getSubTextColor());
 
         findViewById(org.horaapps.leafpic.R.id.rl_ea).setBackgroundColor(getBackgroundColor());
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    protected void setStatusBarColor() {
+
+        getWindow().setStatusBarColor(getResources().getColor(R.color.md_black_1000));
+
     }
 
     private class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {

@@ -366,6 +366,7 @@
   <string name="timeline_grouping_menu_week">Hafta</string>
   <string name="timeline_grouping_menu_month">Ay</string>
   <string name="timeline_grouping_menu_year">Yıl</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 
 
 </resources>

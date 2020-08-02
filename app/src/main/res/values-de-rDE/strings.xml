@@ -237,4 +237,5 @@ an Sie für das verwenden der App    </string>
   <string name="multi_column">Mehrspaltig</string>
   <string name="multi_column_sub">Wählen Sie die Anzahl der Spalten für Ihre Ordner und Medien</string>
   <string name="columns">Spalten</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

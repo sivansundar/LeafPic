@@ -248,4 +248,5 @@
   <string name="multi_column_sub">أختر عدد الأعمدة التي تريدها للملفات والوسائط الخاصة بك
     </string>
   <string name="columns">الأعمدة</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

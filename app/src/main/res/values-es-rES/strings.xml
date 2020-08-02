@@ -260,4 +260,5 @@ a usted por utilizar la aplicación    </string>
   <string name="sub_scaling_image_view">Vista de imagen sub-escalada</string>
   <string name="sub_scaling_image_view_sub">
 (EN PRUEBAS) Permite tener un mejor control del zoom y una imagen clara pero por ahora realmente no está optimizado    </string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

@@ -241,4 +241,5 @@ Crowdin komunite za všetkú prácu na preklade    </string>
   <string name="multi_column">Viac stĺpcov</string>
   <string name="multi_column_sub">Zvoľte si počet stĺpcov zobrazujúcich adresáre a mediálne súbory    </string>
   <string name="columns">stĺpce</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

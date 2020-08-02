@@ -226,4 +226,5 @@ J’ai 20 ans. J’aime la musique, les jeux vidéo et les dessins.         Je s
   <string name="multi_column">Multi colonnes</string>
   <string name="multi_column_sub">Choisi le nombre de colonnes souhaité pour vos dossiers et médias    </string>
   <string name="columns">colonnes</string>
+    <string name="donate_liberapay">donate_liberapay</string>
 </resources>

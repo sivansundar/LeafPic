@@ -85,16 +85,17 @@
   <string name="picture_orientation">Орієнтація зображення</string>
   <string name="picture_orientation_sub">Зміна орієнтації за допомогою датчика</string>
   <string name="apply_theme">Застосувати тему</string>
-  <string name="transparency">Прозорість</string>
-  <string name="theme">Тема</string>
-  <!--DONATE STRINGS-->
-  <!--ABOUT STRINGS-->
-  <!--PHOTO DETAILS-->
-  <!--DRAWER ITEMS -->
-  <string name="local_folder">Локальна папка</string>
-  <string name="tags">Мітки</string>
-  <string name="wallpapers">Фоновий малюнок</string>
-  <string name="donate">Підтримати проект</string>
-  <!--VIDEO PLayer-->
-  <!-- ERRORS -->
+    <string name="transparency">Прозорість</string>
+    <string name="theme">Тема</string>
+    <!--DONATE STRINGS-->
+    <!--ABOUT STRINGS-->
+    <!--PHOTO DETAILS-->
+    <!--DRAWER ITEMS -->
+    <string name="local_folder">Локальна папка</string>
+    <string name="tags">Мітки</string>
+    <string name="wallpapers">Фоновий малюнок</string>
+    <string name="donate">Підтримати проект</string>
+    <string name="donate_liberapay">donate_liberapay</string>
+    <!--VIDEO PLayer-->
+    <!-- ERRORS -->
 </resources>

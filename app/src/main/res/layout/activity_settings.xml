@@ -68,16 +68,16 @@
                         android:layout_height="wrap_content"
                         app:settingCaption="@string/security_sub"
                         app:settingIcon="faw-user-secret"
-                        app:settingTitle="@string/security"/>
+                        app:settingTitle="@string/security" />
 
                     <!-- NUMBER OF COLUMNS -->
-                    <org.horaapps.leafpic.views.SettingBasic
-                        android:id="@+id/ll_n_columns"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:settingCaption="@string/multi_column_sub"
-                        app:settingIcon="gmd-view-column"
-                        app:settingTitle="@string/multi_column"/>
+                    <!--                    <org.horaapps.leafpic.views.SettingBasic-->
+                    <!--                        android:id="@+id/ll_n_columns"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        app:settingCaption="@string/multi_column_sub"-->
+                    <!--                        app:settingIcon="gmd-view-column"-->
+                    <!--                        app:settingTitle="@string/multi_column"/>-->
 
                     <!-- EXCLUDED ALBUM-->
                     <org.horaapps.leafpic.views.SettingBasic
@@ -86,7 +86,7 @@
                         android:layout_height="wrap_content"
                         app:settingCaption="@string/manage_your_folders_sub"
                         app:settingIcon="gmd-burst-mode"
-                        app:settingTitle="@string/manage_your_folders"/>
+                        app:settingTitle="@string/manage_your_folders" />
 
                     <!-- FAB OPTIONS -->
                     <org.horaapps.leafpic.views.SettingWithSwitchView
@@ -137,25 +137,25 @@
                         android:text="@string/theme"
                         android:textColor="@color/md_dark_background"
                         android:textSize="@dimen/medium_text"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
-                    <!--BASIC THEME-->
-                    <org.horaapps.leafpic.views.SettingBasic
-                        android:id="@+id/ll_basic_theme"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:settingCaption="@string/base_theme_sub"
-                        app:settingIcon="gmd-invert-colors"
-                        app:settingTitle="@string/base_theme"/>
+                    <!--                    &lt;!&ndash;BASIC THEME&ndash;&gt;-->
+                    <!--                    <org.horaapps.leafpic.views.SettingBasic-->
+                    <!--                        android:id="@+id/ll_basic_theme"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        app:settingCaption="@string/base_theme_sub"-->
+                    <!--                        app:settingIcon="gmd-invert-colors"-->
+                    <!--                        app:settingTitle="@string/base_theme"/>-->
 
-                    <!--PRIMARY COLOR-->
-                    <org.horaapps.leafpic.views.SettingBasic
-                        android:id="@+id/ll_primaryColor"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:settingCaption="@string/primary_color_sub"
-                        app:settingIcon="gmd-color-lens"
-                        app:settingTitle="@string/primary_color"/>
+                    <!--                    &lt;!&ndash;PRIMARY COLOR&ndash;&gt;-->
+                    <!--                    <org.horaapps.leafpic.views.SettingBasic-->
+                    <!--                        android:id="@+id/ll_primaryColor"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        app:settingCaption="@string/primary_color_sub"-->
+                    <!--                        app:settingIcon="gmd-color-lens"-->
+                    <!--                        app:settingTitle="@string/primary_color"/>-->
 
                     <!--ACCENT COLOR-->
                     <org.horaapps.leafpic.views.SettingBasic
@@ -164,7 +164,7 @@
                         android:layout_height="wrap_content"
                         app:settingCaption="@string/accent_color_sub"
                         app:settingIcon="gmd-format-color-fill"
-                        app:settingTitle="@string/accent_color"/>
+                        app:settingTitle="@string/accent_color" />
 
                     <!-- APPLY THEME ON 3TH ACT -->
                     <org.horaapps.leafpic.views.SettingBasic

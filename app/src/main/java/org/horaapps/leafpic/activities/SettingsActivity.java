@@ -20,7 +20,6 @@ import com.orhanobut.hawk.Hawk;
 import org.horaapps.leafpic.R;
 import org.horaapps.leafpic.settings.CardViewStyleSetting;
 import org.horaapps.leafpic.settings.ColorsSetting;
-import org.horaapps.leafpic.settings.GeneralSetting;
 import org.horaapps.leafpic.settings.MapProviderSetting;
 import org.horaapps.leafpic.settings.SinglePhotoSetting;
 import org.horaapps.leafpic.util.Security;
@@ -146,11 +145,6 @@ public class SettingsActivity extends ThemedActivity {
         }
     }
 
-    @OnClick(R.id.ll_basic_theme)
-    public void onChangeThemeClicked(View view) {
-        new ColorsSetting(SettingsActivity.this).setAmoledMode();
-        //Remove this theme feature and set the base theme AMOLED throughout
-    }
 
     @OnClick(R.id.ll_card_view_style)
     public void onChangeCardViewStyleClicked(View view) {
@@ -178,32 +172,6 @@ public class SettingsActivity extends ThemedActivity {
         });
     }
 
-    @OnClick(R.id.ll_primaryColor)
-    public void onChangePrimaryColorClicked(View view) {
-        final int originalColor = getPrimaryColor();
-        new ColorsSetting(SettingsActivity.this).chooseColor(R.string.primary_color, new ColorsSetting.ColorChooser() {
-            @Override
-            public void onColorSelected(int color) {
-                Hawk.put(getString(R.string.preference_primary_color), color);
-                updateTheme();
-                updateUiElements();
-            }
-
-            @Override
-            public void onDialogDismiss() {
-                Hawk.put(getString(R.string.preference_primary_color), originalColor);
-                updateTheme();
-                updateUiElements();
-            }
-
-            @Override
-            public void onColorChanged(int color) {
-                Hawk.put(getString(R.string.preference_primary_color), color);
-                updateTheme();
-                updateUiElements();
-            }
-        }, getPrimaryColor());
-    }
 
     @OnClick(R.id.ll_accentColor)
     public void onChangeAccentColorClicked(View view) {
@@ -253,9 +221,5 @@ public class SettingsActivity extends ThemedActivity {
         new MapProviderSetting(SettingsActivity.this).choseProvider();
     }
 
-    @OnClick(R.id.ll_n_columns)
-    public void onChangeColumnsClicked(View view) {
-        new GeneralSetting(SettingsActivity.this).editNumberOfColumns();
-    }
 
 }
