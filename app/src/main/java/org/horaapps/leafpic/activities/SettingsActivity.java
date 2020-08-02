@@ -3,6 +3,7 @@ package org.horaapps.leafpic.activities;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
@@ -37,22 +38,32 @@ import butterknife.Unbinder;
  * The Settings Activity used to select settings.
  */
 public class SettingsActivity extends ThemedActivity {
-    private Toolbar toolbar;
+
 
     @BindView(R.id.option_max_brightness) SettingWithSwitchView optionMaxBrightness;
     @BindView(R.id.option_picture_orientation) SettingWithSwitchView optionOrientation;
     @BindView(R.id.option_full_resolution) SettingWithSwitchView optionDelayFullRes;
 
     @BindView(R.id.option_auto_update_media) SettingWithSwitchView optionAutoUpdateMedia;
-    @BindView(R.id.option_include_video) SettingWithSwitchView optionIncludeVideo;
-    @BindView(R.id.option_swipe_direction) SettingWithSwitchView optionSwipeDirection;
+    @BindView(R.id.option_include_video)
+    SettingWithSwitchView optionIncludeVideo;
+    @BindView(R.id.option_swipe_direction)
+    SettingWithSwitchView optionSwipeDirection;
 
-    @BindView(R.id.option_fab) SettingWithSwitchView optionShowFab;
-    @BindView(R.id.option_statusbar) SettingWithSwitchView optionStatusbar;
-    @BindView(R.id.option_colored_navbar) SettingWithSwitchView optionColoredNavbar;
+    @BindView(R.id.option_fab)
+    SettingWithSwitchView optionShowFab;
+    @BindView(R.id.option_statusbar)
+    SettingWithSwitchView optionStatusbar;
+    @BindView(R.id.option_colored_navbar)
+    SettingWithSwitchView optionColoredNavbar;
 
-    @BindView(R.id.option_sub_scaling) SettingWithSwitchView optionSubScaling;
-    @BindView(R.id.option_disable_animations) SettingWithSwitchView optionDisableAnimations;
+    @BindView(R.id.option_sub_scaling)
+    SettingWithSwitchView optionSubScaling;
+    @BindView(R.id.option_disable_animations)
+    SettingWithSwitchView optionDisableAnimations;
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar; // Toolbar broken. Doesnt respond to color changes.
 
     private Unbinder unbinder;
 
@@ -66,9 +77,9 @@ public class SettingsActivity extends ThemedActivity {
         setContentView(R.layout.activity_settings);
 
         unbinder = ButterKnife.bind(this);
-        toolbar = findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
+        // Check this
+
         toolbar.setNavigationIcon(getToolbarIcon(GoogleMaterial.Icon.gmd_arrow_back));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,7 +122,8 @@ public class SettingsActivity extends ThemedActivity {
     @Override
     public void updateUiElements() {
         super.updateUiElements();
-        findViewById(org.horaapps.leafpic.R.id.setting_background).setBackgroundColor(getBackgroundColor());
+        findViewById(org.horaapps.leafpic.R.id.setting_background).setBackgroundColor(Color.BLACK);
+        toolbar.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
         setStatusBarColor();
         setNavBarColor();
         setRecentApp(getString(org.horaapps.leafpic.R.string.settings));

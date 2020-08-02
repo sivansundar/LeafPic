@@ -729,6 +729,7 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
     public void setNavBarColor() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (themeOnSingleImgAct())
+                //Build a Light theme feature if time permits.
                 if (isNavigationBarColored())
                     getWindow().setNavigationBarColor(ColorPalette.getTransparentColor(getResources().getColor(R.color.md_black_1000), getTransparency()));
                 else
@@ -743,6 +744,7 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (themeOnSingleImgAct())
                 if (isTranslucentStatusBar() && isTransparencyZero())
+
                     getWindow().setStatusBarColor(ColorPalette.getObscuredColor(getResources().getColor(R.color.md_black_1000)));
                 else
                     getWindow().setStatusBarColor(ColorPalette.getTransparentColor(getResources().getColor(R.color.md_black_1000), getTransparency()));
