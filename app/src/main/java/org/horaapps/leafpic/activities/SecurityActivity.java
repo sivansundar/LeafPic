@@ -131,6 +131,8 @@ public class SecurityActivity extends ThemedActivity {
 
     private void initUi() {
         setSupportActionBar(toolbar);
+        toolbar.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
+
         toolbar.setNavigationIcon(getToolbarIcon(GoogleMaterial.Icon.gmd_arrow_back));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

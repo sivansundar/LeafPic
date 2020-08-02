@@ -67,6 +67,8 @@ public class SettingsActivity extends ThemedActivity {
 
     private Unbinder unbinder;
 
+    int toolbarBackground;
+
     public static void startActivity(@NonNull Context context) {
         context.startActivity(new Intent(context, SettingsActivity.class));
     }
@@ -77,6 +79,8 @@ public class SettingsActivity extends ThemedActivity {
         setContentView(R.layout.activity_settings);
 
         unbinder = ButterKnife.bind(this);
+
+        toolbarBackground = getResources().getColor(R.color.md_black_1000);
         setSupportActionBar(toolbar);
         // Check this
 
@@ -123,7 +127,7 @@ public class SettingsActivity extends ThemedActivity {
     public void updateUiElements() {
         super.updateUiElements();
         findViewById(org.horaapps.leafpic.R.id.setting_background).setBackgroundColor(Color.BLACK);
-        toolbar.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
+        toolbar.setBackgroundColor(toolbarBackground);
         setStatusBarColor();
         setNavBarColor();
         setRecentApp(getString(org.horaapps.leafpic.R.string.settings));

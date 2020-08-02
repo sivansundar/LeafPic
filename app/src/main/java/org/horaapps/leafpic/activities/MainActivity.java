@@ -267,6 +267,7 @@ public class MainActivity extends SharedMediaActivity implements
 
     @Override
     public void onItemsSelected(int count, int total) {
+
         toolbar.setTitle(getString(R.string.toolbar_selection_count, count, total));
 
     }
@@ -313,6 +314,9 @@ public class MainActivity extends SharedMediaActivity implements
         navigationDrawer.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cactus);
         navigationDrawerView.setListener(this);
         navigationDrawerView.setAppVersion(BuildConfig.VERSION_NAME);
     }
@@ -372,6 +376,7 @@ public class MainActivity extends SharedMediaActivity implements
         toolbar.setPopupTheme(getPopupToolbarStyle());
         toolbar.setBackgroundColor(toolbarBackground);
 
+        toolbar.setTitleTextAppearance(this, (R.style.ToolBarStyle));
         /**** SWIPE TO REFRESH ****/
 
         setStatusBarColor();

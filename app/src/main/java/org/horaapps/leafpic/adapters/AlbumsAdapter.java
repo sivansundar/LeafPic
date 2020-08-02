@@ -301,8 +301,8 @@ public class AlbumsAdapter extends ThemedAdapter<AlbumsAdapter.ViewHolder> {
         holder.mediaLabel.setTextColor(textColor);
 
         holder.llCount.setVisibility(Prefs.showMediaCount() ? View.VISIBLE : View.GONE);
-        holder.name.setText(StringUtils.htmlFormat(a.getName(), textColor, false, true));
-        holder.nMedia.setText(StringUtils.htmlFormat(String.valueOf(a.getCount()), textColor, true, false));
+        holder.name.setText(StringUtils.htmlFormat(a.getName(), textColor, false, false));
+        holder.nMedia.setText(StringUtils.htmlFormat(String.valueOf(a.getCount()), textColor, false, false));
         holder.path.setVisibility(Prefs.showAlbumPath() ? View.VISIBLE : View.GONE);
         holder.path.setText(a.getPath());
 

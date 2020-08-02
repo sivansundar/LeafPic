@@ -124,11 +124,11 @@
 
             <!--BODY-->
             <LinearLayout
+                android:layout_marginTop="24dp"
                 android:id="@+id/ll_security_dialog_body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="@dimen/big_spacing">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -137,10 +137,11 @@
                     android:text="@string/apply_password_on"
                     android:textColor="@color/md_dark_primary_text"
                     android:textSize="@dimen/medium_text"
+                    android:layout_marginStart="@dimen/big_spacing"
                     android:textStyle="bold" />
 
                 <!--HIDDEN FOLDER-->
-                <LinearLayout
+                <LinearLayout android:layout_marginTop="20dp"
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/ll_security_body_apply_hidden"
                     android:layout_width="match_parent"

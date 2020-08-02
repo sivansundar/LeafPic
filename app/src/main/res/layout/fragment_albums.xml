@@ -12,6 +12,6 @@
         android:layout_gravity="center_horizontal"
         android:clipToPadding="false"
         android:scrollbars="vertical"
-        android:scrollbarThumbVertical="@drawable/ic_scrollbar" />
+        android:scrollbarThumbVertical="@color/md_white_1000" />
 
 </android.support.v4.widget.SwipeRefreshLayout>

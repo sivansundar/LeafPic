@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -26,6 +27,7 @@ import org.horaapps.leafpic.util.AlertDialogsHelper;
 import org.horaapps.leafpic.util.ApplicationUtils;
 import org.horaapps.leafpic.util.ChromeCustomTabs;
 import org.horaapps.leafpic.util.preferences.Prefs;
+import org.horaapps.liz.ColorPalette;
 import org.horaapps.liz.ThemedActivity;
 import org.horaapps.liz.ui.ThemedTextView;
 
@@ -59,17 +61,27 @@ import static org.horaapps.leafpic.util.ServerConstants.TWITTER_ABOUT_GILBERT;
  */
 public class AboutActivity extends ThemedActivity implements ContactListener {
 
-    @BindView(R.id.toolbar) Toolbar toolbar;
-    @BindView(R.id.about_version_item_sub) ThemedTextView appVersion;
-    @BindView(R.id.aboutAct_scrollView) ScrollView aboutScrollView;
-    @BindView(R.id.about_developer_donald) AboutCreator aboutDonald;
-    @BindView(R.id.about_developer_gilbert) AboutCreator aboutGilbert;
-    @BindView(R.id.about_patryk_goworowski_item_sub) ThemedTextView specialThanksPatryk;
-    @BindView(R.id.about_link_changelog) AboutLink linkChangelog;
-    @BindView(R.id.list_contributors) RecyclerView rvContributors;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.about_version_item_sub)
+    ThemedTextView appVersion;
+    @BindView(R.id.aboutAct_scrollView)
+    ScrollView aboutScrollView;
+    @BindView(R.id.about_developer_donald)
+    AboutCreator aboutDonald;
+    @BindView(R.id.about_developer_gilbert)
+    AboutCreator aboutGilbert;
+    @BindView(R.id.about_patryk_goworowski_item_sub)
+    ThemedTextView specialThanksPatryk;
+    @BindView(R.id.about_link_changelog)
+    AboutLink linkChangelog;
+    @BindView(R.id.list_contributors)
+    RecyclerView rvContributors;
 
     private ChromeCustomTabs chromeTabs;
     private int emojiEasterEggCount = 0;
+
+    int toolbarBackground;
 
     public static void startActivity(@NonNull Context context) {
         context.startActivity(new Intent(context, AboutActivity.class));
@@ -80,6 +92,9 @@ public class AboutActivity extends ThemedActivity implements ContactListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         ButterKnife.bind(this);
+
+        toolbarBackground = getResources().getColor(R.color.md_black_1000);
+
         chromeTabs = new ChromeCustomTabs(AboutActivity.this);
 
         initUi();
@@ -216,7 +231,7 @@ public class AboutActivity extends ThemedActivity implements ContactListener {
     @Override
     public void updateUiElements() {
         super.updateUiElements();
-        toolbar.setBackgroundColor(getPrimaryColor());
+        toolbar.setBackgroundColor(toolbarBackground);
         toolbar.setNavigationIcon(getToolbarIcon(GoogleMaterial.Icon.gmd_arrow_back));
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
@@ -225,6 +240,19 @@ public class AboutActivity extends ThemedActivity implements ContactListener {
         setNavBarColor();
 
         specialThanksPatryk.setLinkTextColor(getAccentColor());
+    }
+
+    @Override
+    protected void setStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            int color = ContextCompat.getColor(this, R.color.md_black_1000);
+            if (isTranslucentStatusBar())
+                getWindow().setStatusBarColor(ColorPalette.getObscuredColor(color));
+            else getWindow().setStatusBarColor(color);
+            if (isNavigationBarColored()) getWindow().setNavigationBarColor(color);
+            else
+                getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.md_black_1000));
+        }
     }
 
     @Override

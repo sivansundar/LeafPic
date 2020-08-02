@@ -170,7 +170,7 @@
     <string name="security_sub">Set up a password to protect your media.</string>
     <string name="remember_password_message">Note: Password changed. If you forget it, you will have to clear the application data.</string>
 
-    <string name="apply_password_on">Use password for: </string>
+    <string name="apply_password_on">Use password for </string>
 
     <string name="fingerprint">Fingerprint</string>
     <string name="clear_password">Clear Password</string>
